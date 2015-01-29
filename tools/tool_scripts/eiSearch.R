@@ -2,7 +2,10 @@
 # requires: ChemmineR,R.utils
 # use: ./eiSearch.R --outfile=output.txt --simCutoff=0.3 --numResults=10 < input.sdf
 
-library(eiR)
+library(ChemmineOB,lib.loc="/home/khoran/R")
+library(ChemmineR,lib.loc="/home/khoran/R")
+library(eiR,lib.loc="/home/khoran/R")
+
 library(R.utils)
 #library(RPostgreSQL)
 

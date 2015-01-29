@@ -1,6 +1,8 @@
 #!/usr/bin/env Rscript
 library(rzmq)
-library(eiR)
+library(ChemmineOB,lib.loc="/home/khoran/R")
+library(ChemmineR,lib.loc="/home/khoran/R")
+library(eiR,lib.loc="/home/khoran/R")
 
 context = init.context()
 socket = init.socket(context,"ZMQ_REP")
@@ -12,8 +14,7 @@ loadPubchem <- function(){
 	library(RPostgreSQL)
 	r=200
 	d=100
-	basedir = "/srv/eiSearch/pubchem"
-#	refIddb =file.path(basedir,"run-200-100","20ce78e8a7a08151502a294ced998301.distmat")
+	basedir = "/srv/eiSearch/pubchem2"
 	message("loading lsh data")
 	lshData=loadLSHData(r,d,dir=basedir)
 	message("loading main ids")
