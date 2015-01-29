@@ -13,7 +13,6 @@ loadPubchem <- function(){
 	r=200
 	d=100
 	basedir = "/srv/eiSearch/pubchem"
-#	refIddb =file.path(basedir,"run-200-100","20ce78e8a7a08151502a294ced998301.distmat")
 	message("loading lsh data")
 	lshData=loadLSHData(r,d,dir=basedir)
 	message("loading main ids")
